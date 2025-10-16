@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT Fan Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffffd9;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand img { height: 36px; }
+    .brand h1 { font-size: 20px; color: #222; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #0078ff; }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        padding: 10px;
+      }
+      nav ul.active { display: flex; }
+      .menu-toggle { display: block; }
+    }
+
+    .hero {
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)), 
+                  url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=80") no-repeat center/cover;
+      color: #fff;
+    }
+    .hero h2 {
+      font-size: 28px;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card h2 { color: #111; font-size: 20px; margin-bottom: 6px; }
+    .card p { color: #555; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #0078ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #005ecb; }
+
+    footer {
+      text-align: center;
+      background: #111;
+      color: #ddd;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="https://img.icons8.com/ios-filled/50/000000/computer.png" alt="ICT logo">
+      <h1>ICT Fan Club</h1>
+    </div>
+
+    <button class="menu-toggle">&#9776;</button>
+
+    <nav>
+      <ul>
+        <li><a href="i.php">Login</a></li>
+        <li><a href="d.html">Devices</a></li>
+        <li><a href="h.html">HTML</a></li>
+        <li><a href="c.html">C Program</a></li>
+        <li><a href="ab.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>ICT Fan Club-এ স্বাগতম 🚀</h2>
+  </section>
+
+  <main>
+    <div class="card">
+      <h2>C Programming</h2>
+      <p>Learn and practice problem-solving in C language.</p>
+      <a href="c.html" class="btn">Explore</a>
+    </div>
+
+    <div class="card">
+      <h2>HTML Basics</h2>
+      <p>Start your web journey with easy HTML tutorials.</p>
+      <a href="h.html" class="btn">Learn</a>
+    </div>
+
+    <div class="card">
+      <h2>Digital Devices</h2>
+      <p>Understand logic gates and modern digital systems.</p>
+      <a href="d.html" class="btn">View</a>
+    </div>
+
+    <div class="card">
+      <h2>About Us</h2>
+      <p>Learn more about ICT Fan Club and our mission.</p>
+      <a href="ab.html" class="btn">Details</a>
+    </div>
+  </main>
+
+  <footer>
+    <b>Made by Hamim</b><br>
+    Special thanks to Shifat & Tayeb Sir.<br>
+    © <span id="year"></span> ICT Fan Club
+  </footer>
+
+  <script>
+    // Responsive menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
