@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | ICT Fan Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Hind+Siliguri&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins','Hind Siliguri', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #512DA8, #673AB7);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand img { height: 36px; }
+    .brand h1 { font-size: 20px; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #FFD54F; }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #512DA8;
+        position: absolute;
+        right: 10px;
+        top: 55px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      nav ul.active { display: flex; }
+      .menu-toggle { display: block; }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1350&q=80") no-repeat center/cover;
+      color: white;
+      text-align: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero h2 {
+      position: relative;
+      font-size: 30px;
+      background: rgba(255,255,255,0.15);
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-shadow: 0 0 10px #FFC107;
+    }
+
+    /* Scroll text */
+    .scroll-text {
+      margin: 20px auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      color: #b71c1c;
+      animation: slide 25s linear infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    @keyframes slide {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    /* Content */
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-3px); }
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #512DA8;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #512DA8, #673AB7);
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/computer.png" alt="Logo">
+      <h1>ICT Fan Club</h1>
+    </div>
+
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">&#9776;</button>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>আমাদের সম্পর্কে 🚀</h2>
+  </section>
+
+  <div class="scroll-text">Learn • Code • Explore • Share • Grow Together • 🚀</div>
+
+  <div class="content">
+    <div class="card">
+      <details>
+        <summary>সার্বিক ব্যবস্থাপনা</summary>
+        <p><b>মোঃ হামিম হক</b></p>
+      </details>
+    </div>
+
+    <div class="card">
+      <details>
+        <summary>অনুপ্রেরণা ও সহযোগিতায়</summary>
+        <p><b>মোহাম্মদ সিফাত</b></p>
+      </details>
+    </div>
+
+    <div class="card">
+      <details>
+        <summary>প্রকাশকাল</summary>
+        <p><b>একুশ আগস্ট ২০২৫</b></p>
+      </details>
+    </div>
+
+    <div class="card">
+      <details>
+        <summary>যোগাযোগের ঠিকানা</summary>
+        <p><b>Not available</b></p>
+      </details>
+    </div>
+  </div>
+
+  <footer>
+    © ICT Fan Club 2025 | Designed by Hamim 💻
+  </footer>
+
+</body>
+</html>
