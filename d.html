@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT Fan Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #333, #555);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+header img {
+  height: 38px;
+  margin-right: 10px;
+}
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Navbar */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #ffd54f;
+}
+
+/* Menu toggle for mobile */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  nav ul.active { display: flex; }
+  .menu-toggle { display: block; }
+}
+
+/* Hero Banner */
+.hero {
+  background: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1350&q=80") no-repeat center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.hero h2 {
+  position: relative;
+  font-size: 32px;
+  background: rgba(0,0,0,0.4);
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-shadow: 0 0 12px #ff9800;
+}
+
+/* Scrolling text */
+.scroll-text {
+  color: #d32f2f;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: slide 20s linear infinite;
+  margin: 20px 0;
+  text-align: center;
+}
+@keyframes slide {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Content */
+.content {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #333, #555);
+  color: #ddd;
+  text-align: center;
+  padding: 18px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* Responsive grid (optional future use) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/computer.png" alt="Logo">
+    <h1>ICT Fan Club</h1>
+  </div>
+  <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">&#9776;</span>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Banner -->
+<section class="hero">
+  <h2>🚀 Digital Devices 🚀</h2>
+</section>
+
+<!-- Content -->
+<div class="content">
+  <div class="scroll-text">Learn • Code • Explore • Share • Grow Together</div>
+
+  <div class="card">
+    <p>Content coming soon...<br>Stay with us 💻</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>© ICT Fan Club 2025 | Designed with ❤️</footer>
+
+</body>
+</html>

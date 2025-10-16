@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT fan club</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #222, #444);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header img {
+  height: 40px;
+  margin-right: 10px;
+}
+header h1 {
+  font-size: 22px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #fdd835;
+}
+
+.hero {
+  background: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+.hero h2 {
+  font-size: 32px;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.scroll-text {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: slide 10s linear infinite;
+  margin: 15px 0;
+}
+@keyframes slide {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+.content {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: blue;
+  background: #ff5722;
+  border-radius: 6px;
+  transition: 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.btn:hover {
+  background: #e64a19;
+  box-shadow: 0 0 15px #ff5722, 0 0 25px #ff9800;
+  transform: translateY(-2px);
+}
+
+footer {
+  background: linear-gradient(90deg, #222, #444);
+  color: green;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+<header>
+<div style="display: flex; align-items: center;">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/computer.png" alt="Logo">
+<h1>ICT Fan Club</h1>
+</div>
+<nav>
+<ul>
+<li>
+<a href="c.html">
+<img src="https://img.icons8.com/ios-filled/24/ffffff/home.png" style="vertical-align:middle; margin-right:5px;">
+C program
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h2>🚀 C programming 🚀</h2>
+</section>
+
+<div class="content">
+<div class="card">
+<h1>তাপমাত্রার ফারেনহাইট থেকে সেলসিয়াস স্কেলে পরিবর্তন নির্ণয়ের সি প্রোগ্রাম লিখ</h1>
+<p><img src="C program_page-0008.jpg"></p>
+</div>
+</div>
+
+<div class="card"><p>© ict fan club 2025</p></div>
+</body></html>
