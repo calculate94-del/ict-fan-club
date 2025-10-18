@@ -37,7 +37,7 @@ Explore more at our official website: [ICT Fan Club](https://calculate94-del.git
 ## 📫 Contact
 
 Questions or suggestions?  
-Reach out at: [contact@ictfanclub.com](mailto:contact@ictfanclub.com)
+Reach out at: [contact@ictfanclub.com](mailto:calculate94@gmail.com)
 
 ---
 
