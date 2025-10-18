@@ -1,198 +1,240 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ICT Fan Club</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style>
-* {margin:0; padding:0; box-sizing:border-box;}
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #eef2f3, #8e9eab);
-  color: #333;
-}
-
-/* Header */
-header {
-  background: #1f2937;
-  color: white;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.brand img {
-  height: 40px;
-}
-.brand h1 {
-  font-size: 20px;
-  letter-spacing: 1px;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-nav ul li a:hover {
-  color: #60a5fa;
-}
-
-/* Search bar */
-.search-box {
-  display: flex;
-  align-items: center;
-  background: #374151;
-  border-radius: 6px;
-  padding: 5px 10px;
-}
-.search-box input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 5px;
-  width: 120px;
-}
-.search-box input::placeholder {
-  color: #ccc;
-}
-.search-box button {
-  background: none;
-  border: none;
-  color: #9ca3af;
-  cursor: pointer;
-  font-size: 16px;
-}
-.search-box button:hover {
-  color: #fff;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(120deg, #2563eb, #1e3a8a);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-.hero h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-.hero p {
-  font-size: 16px;
-  color: #e0e7ff;
-}
-
-/* Cards grid */
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  padding: 30px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* Card */
-.card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-.card img {
-  width: 100%;
-  border-bottom: 1px solid #ddd;
-}
-.card a {
-  display: block;
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  padding: 12px;
-  text-align: center;
-  transition: 0.3s;
-}
-.card a:hover {
-  color: #2563eb;
-}
-
-/* Footer */
-footer {
-  background: #1f2937;
-  color: #9ca3af;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  margin-top: 40px;
-}
-footer b {
-  color: #fff;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT Fan Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      color: #333;
+    }
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand img {
+      height: 40px;
+    }
+    .brand h1 {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover, nav ul li a:focus {
+      color: #60a5fa;
+      outline: none;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #374151;
+      border-radius: 6px;
+      padding: 5px 10px;
+      margin-left: 20px;
+    }
+    .search-box input[type="search"] {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 5px;
+      width: 120px;
+    }
+    .search-box input::placeholder {
+      color: #ccc;
+    }
+    .search-box button {
+      background: none;
+      border: none;
+      color: #9ca3af;
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 5px;
+      transition: color 0.2s;
+    }
+    .search-box button:hover, .search-box button:focus {
+      color: #fff;
+      outline: none;
+    }
+    .hero {
+      background: linear-gradient(120deg, #2563eb, #1e3a8a);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 16px;
+      color: #e0e7ff;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .card:hover, .card:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      transition: transform 0.2s;
+    }
+    .card a {
+      display: block;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      padding: 12px;
+      text-align: center;
+      transition: 0.3s;
+      outline: none;
+    }
+    .card a:hover, .card a:focus {
+      color: #2563eb;
+      background: #f3f6fa;
+    }
+    footer {
+      background: #1f2937;
+      color: #9ca3af;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    footer b {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="brand">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/computer.png" alt="ICT Fan Club logo">
+      <h1>ICT Fan Club</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+    <form class="search-box" role="search" aria-label="Search HTML practice">
+      <input type="search" placeholder="Search..." aria-label="Search HTML practice">
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+  </header>
 
-<header>
-  <div class="brand">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/computer.png" alt="Logo">
-    <h1>ICT Fan Club</h1>
-  </div>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li></ul>
-  </nav>
-</header>
-  <div class="search-box">
-    <input type="text" placeholder="Search...">
-    <button>🔍</button>
-  </div>
-
-
-<section class="hero">
-  <h2>🚀 HTML Practice Section</h2>
-  <p>Learn • Code • Explore • Share</p>
-</section>
-
-
-<div class="container">
-<div class="card"><a href="hh01.html">প্রশ্নের মতো output পেতে Html কোড লিখ<br><img src="hq1.jpg"></a></div>
-<div class="card"><a href="hh02.html">প্রশ্নের মতো output পেতে Html কোড লিখ<br><img src="hq2.jpg"></a></div>
-<div class="card"><a href="hh03.html">প্রশ্নের মতো output পেতে Html কোড লিখ<br><img src="hq3.jpg"></a></div>
-<div class="card"><a href="hh04.html">প্রশ্নের মতো output পেতে Html কোড লিখ<br><img src="hq4.jpg"></a></div>
-<div class="card"><a href="hh05.html">প্রশ্নের মতো output পেতে Html কোড লিখ<br><img src="hq5.jpg"></a></div>
-<div class="card"><a href="hh06.html">প্রশ্নের মতো output পেতে Html কোড লিখ<br><img src="hq6.jpg"></a></div>
-<div class="card"><a href="hh07.html">প্রশ্নের টেবিলের সারিকে কলামে রূপান্তর করে output পেতে Html কোড লিখ<br><img src="hq7.jpg"></a></div>
-<div class="card"><a href="hh08.html">প্রশ্নের টেবিলের সারিকে কলামে রূপান্তর করে output পেতে Html কোড লিখ<br><img src="hq8.jpg"></a></div>
-<div class="card"><a href="hh09.html">প্রশ্নের মতো output পেতে Html কোড লিখ<br><img src="hq9.jpg"></a></div>
-</div>
-
-<footer>
-  <b>© ICT Fan Club 2025</b><br>
-  Designed by Hamim
-</footer>
-
+  <main>
+    <section class="hero">
+      <h2>🚀 HTML Practice Section</h2>
+      <p>Learn • Code • Explore • Share</p>
+    </section>
+    <section>
+      <div class="container" role="list">
+        <div class="card" role="listitem">
+          <a href="hh01.html">
+            প্রশ্নের মতো output পেতে Html কোড লিখ<br>
+            <img src="hq1.jpg" alt="HTML output example 1">
+          </a>
+        </div>
+        <div class="card" role="listitem">
+          <a href="hh02.html">
+            প্রশ্নের মতো output পেতে Html কোড লিখ<br>
+            <img src="hq2.jpg" alt="HTML output example 2">
+          </a>
+        </div>
+        <div class="card" role="listitem">
+          <a href="hh03.html">
+            প্রশ্নের মতো output পেতে Html কোড লিখ<br>
+            <img src="hq3.jpg" alt="HTML output example 3">
+          </a>
+        </div>
+        <div class="card" role="listitem">
+          <a href="hh04.html">
+            প্রশ্নের মতো output পেতে Html কোড লিখ<br>
+            <img src="hq4.jpg" alt="HTML output example 4">
+          </a>
+        </div>
+        <div class="card" role="listitem">
+          <a href="hh05.html">
+            প্রশ্নের মতো output পেতে Html কোড লিখ<br>
+            <img src="hq5.jpg" alt="HTML output example 5">
+          </a>
+        </div>
+        <div class="card" role="listitem">
+          <a href="hh06.html">
+            প্রশ্নের মতো output পেতে Html কোড লিখ<br>
+            <img src="hq6.jpg" alt="HTML output example 6">
+          </a>
+        </div>
+        <div class="card" role="listitem">
+          <a href="hh07.html">
+            প্রশ্নের টেবিলের সারিকে কলামে রূপান্তর করে output পেতে Html কোড লিখ<br>
+            <img src="hq7.jpg" alt="HTML output table example 7">
+          </a>
+        </div>
+        <div class="card" role="listitem">
+          <a href="hh08.html">
+            প্রশ্নের টেবিলের সারিকে কলামে রূপান্তর করে output পেতে Html কোড লিখ<br>
+            <img src="hq8.jpg" alt="HTML output table example 8">
+          </a>
+        </div>
+        <div class="card" role="listitem">
+          <a href="hh09.html">
+            প্রশ্নের মতো output পেতে Html কোড লিখ<br>
+            <img src="hq9.jpg" alt="HTML output example 9">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <b>© ICT Fan Club 2025</b><br>
+    Designed by Hamim
+  </footer>
 </body>
 </html>
