@@ -22,7 +22,7 @@ Hello! I'm **Hamim**, founder of ICT Fan Club. Our mission is to build a vibrant
 
 ## 🌐 Visit Us
 
-Explore more at our official website: [ICT Fan Club](https://ictfanclub.com)
+Explore more at our official website: [ICT Fan Club](https://calculate94-del.github.io/ict-fan-club/index.html)
 
 ---
 
